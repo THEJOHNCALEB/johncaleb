@@ -29,11 +29,11 @@ namespace CHATFREE.Controllers
 
                     Surname = "caleb",
                     OtherNames = "john",
-                    Email = "calebjohn3112@gmail.com",
-                    TelephoneNumber = "08036000305",
+                    Email = "user@gmail.com",
+                    TelephoneNumber = "08000000006",
                     RegistrationDate = DateTime.Now,
                     IsActive = true,
-                    Password = BCrypt.Net.BCrypt.EnhancedHashPassword("calebjohn"),
+                    Password = BCrypt.Net.BCrypt.EnhancedHashPassword("0000"),
                     
                 };
                 _userDatabaseAccess.Insert(newUser);
