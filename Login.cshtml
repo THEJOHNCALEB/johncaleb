@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    Layout = "_LoginLayout";
+}
+<div class="join-container">
+      <header class="join-header">
+        <h1 style="font-family: Elephant;"><i class="fa fa-american-sign-language-interpreting" style="font-size:40px; color:white;"></i> ChatFree </h1>
+      </header>
+      <main class="join-main">
+        <form  asp-controller="Login" asp-action="Login" method="post">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              style="color: white;"
+              class="form-control"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter email address..."
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+                style="color: white;"
+              class="form-control"
+              type="password"
+              name="Password"
+              id="password"
+              placeholder="Enter Password..."
+              required
+            />
+            <input type="checkbox" onclick="myFunction()"> Show Password
+          </div>
+          
+          <div class="fle">
+            <button type="submit" class="btn btn-success">Login to Chat</button>
+          </div><br />
+          <div class="col-12">                
+                <div class="alert-warning">
+                    @ViewBag.ErrorMessage
+                </div>
+            </div>
+        </form>
+        
+        <div class="fle">
+            <div class="col-12">                
+                <a style="text-decoration: none;"
+                    class="btn btn-primary" 
+                    asp-controller="Login" 
+                    asp-action="Register">
+                    Sign Up
+                </a>
+            </div>
+            
+          </div> 
+          
+      </main>
+</div>
+
+
+@section scripts {
+        <script>
+function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+    }
