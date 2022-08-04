@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
 namespace CHATFREE.Controllers
 {
     [AllowAnonymous]
